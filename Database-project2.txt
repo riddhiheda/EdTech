@@ -1,0 +1,66 @@
+create database project2;
+
+use project2;
+
+
+create table USERS(
+user_id int,
+username varchar(20),
+password char(10),
+user_type char(7));
+
+
+create table COURSE(
+course_code char(5),
+course_name varchar(20),
+description varchar(200));
+
+insert into COURSE values('101','12','Class 12');
+insert into COURSE values('105','11','Class 11');
+
+
+create table SUBJECTS(
+sub_code char(5),
+sub_name varchar(20),
+course_code char(5),
+description varchar(200));
+
+insert into SUBJECTS values('61','English','105','English for Class 11');
+insert into SUBJECTS values('63','Physics','105','Physics for Class 11');
+insert into SUBJECTS values('64','Maths','105','Mathematics for Class 11');
+insert into SUBJECTS values('67','Chemistry','105','Chemistry for Class 11');
+insert into SUBJECTS values('68','IP','105','Informatics Practices for Class 11');
+insert into SUBJECTS values('81','IP','101','Informatics Practices for Class 12');
+insert into SUBJECTS values('84','Chemistry','101','Chemistry for Class 12');
+insert into SUBJECTS values('85','English','101','English for Class 12');
+insert into SUBJECTS values('87','Physics','101','Physics for Class 12');
+insert into SUBJECTS values('89','Maths','101','Mathematics for Class 12');
+
+
+create table CHAPTERS(
+chap_code char(5),
+chap_name varchar(20),
+description varchar(200),
+sub_code char(5),
+link varchar(500));
+
+insert into CHAPTERS values('01','Rotational Motion','CoM,MoI','63','https://www.youtube.com/watch?v=lm1HmiDSnGE');
+insert into CHAPTERS values('04','Projectile Motion','Trajectory,Max ht,Range','63','https://www.youtube.com/watch?v=BR_AL8MWk_U');
+insert into CHAPTERS values('07','Alternating Current','Impedance,Tranformer','87','https://www.youtube.com/watch?v=tg9hyofB1ZA');
+insert into CHAPTERS values('09','EM Induction','Faraday laws,Lenz law','87','https://www.youtube.com/watch?v=_nID-1Of7oI');
+insert into CHAPTERS values('12','Periodic Properties','Classification of elements','67','https://www.youtube.com/watch?v=t_f8bB1kf6M&list=PL2ub1_oKCn7r8lxDg5NYwG0SPhWH5O-Bf');
+insert into CHAPTERS values('15','Redox Reactions','Balancing,Titration','67','https://www.youtube.com/watch?v=RM2fwQvC7ZI&list=PL2ub1_oKCn7pEIrpx-oEPm6UVzMsqJ7fu');
+insert into CHAPTERS values('16','Chemical Kinetics','Rate of rxn,1st order rxn','84','https://www.youtube.com/watch?v=1iAxhc6EflI&list=PLSQl0a2vh4HBiErizowiUU0C-AfJBBoYh');
+insert into CHAPTERS values('18','Electrochemistry','Galvanic Cell,Corrosion','84','https://www.youtube.com/watch?v=9Xncz_mMc5g');
+insert into CHAPTERS values('20','Trigonometry','Identities,Equations','64','https://www.youtube.com/watch?v=npDaL7IPWuw&list=PL7eKoJuwryW664UDccav32fehndB4OggN');
+insert into CHAPTERS values('23','Complex Nos','iota,imaginary nos','64','https://www.youtube.com/watch?v=poM5V1ltomg&list=PL7eKoJuwryW553RzXhybbWn-vHL2UwWOV');
+insert into CHAPTERS values('25','Matrices','Types,Properties of Matrices','89','https://www.youtube.com/watch?v=0oGJTQCy4cQ&list=PLi5giWKc4eO1G8oX3ft8ZuLQr4Y4idgng');
+insert into CHAPTERS values('27','Calculus','Integration','89','https://www.youtube.com/watch?v=dh__n9FVKA0&list=PLVwvyzz17cDI9d-P8FN69xr2zDz4bSuHF');
+insert into CHAPTERS values('32','Working with numpy','ndarray,operations on 2d arrays','68','https://www.learncbse.in/python-programming-fundamentals-class-11-12-numpy/');
+insert into CHAPTERS values('35','Simple Queries-SQL','Mysql func,Aggregate Func','68','https://www.youtube.com/playlist?list=PL9KfEmlkVHBqzvyXo0qMVzMFe7JbEtHIn');
+insert into CHAPTERS values('37','Python Pandas','Series & DataFrame','81','www.oswaalbooks.com/download/freeresources/class12/521IP__Quick%20Review---1-35.pdf');
+insert into CHAPTERS values('39','Plotting with PyPlot','barchart,linechart','81','https://cbsetoday.com/data-visualisation-using-pyplot-class-12/');
+insert into CHAPTERS values('43','The Browning Version','hornbill chapter','61','https://www.toppr.com/guides/english/english-hornbill/the-browning-version-summary/');
+insert into CHAPTERS values('45','Mothers Day','snapshot chapter','61','https://www.toppr.com/guides/english/english-snapshot/mothers-day-summary/');
+insert into CHAPTERS values('47','The Last Lesson','flamingo chapter','85','https://www.youtube.com/watch?v=z7ZRBC8dUEs');
+insert into CHAPTERS values('49','Third Level','vistas chapter','85','https://www.youtube.com/watch?v=QNGJr9qpHvw&t=18s');
